@@ -6,7 +6,25 @@ public class App {
         return "Hello world.";
     }
 
+    private boolean isActive(String status) {
+        // Implement your solution
+        return status.equals("active");
+    }
+
+    private String grade(int input) {
+        // Implement your solution
+        if (input >= 90) return "A";
+        else if (input >= 80) return "B";
+        else if (input >= 70) return "C";
+        else if (input >= 60) return "D";
+        else return "F";
+    }
+
     public static void main(String[] args) {
+
         System.out.println(new App().getGreeting());
+        if (new App().isActive("bob")) System.out.println("True!");
+        else System.out.println("False!");
+        System.out.println("Student grade: " + new App().grade(75));
     }
 }
